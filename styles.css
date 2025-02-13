@@ -1,42 +1,60 @@
+
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
 }
+
 
 section.profile {
-    height: 800px;
-    justify-content: center;
+    height: 100vh; 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: #f4f4f4;
 }
+
+
 .card {
-    width: 200px;
-    height:450PX;
-    background-color: grey;
-    padding: 5px 10px;
-}
-.card a{
-        text-decoration: none;
-        padding: 5px 10px;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
 }
 
-.card img{
+
+.card .gambar img {
     width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-.deskripsi{
-    padding: 5px;
+
+.card .deskripsi h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
 }
 
-.gambar img {
-    width: 100%;
-    max-width: 200px; 
+.card .deskripsi p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+    padding: 0 10px;
 }
 
-.deskripsi {
-    padding: 5px;
+
+.card .medsos a {
+    text-decoration: none;
+    color: #007BFF;
+    margin: 0 5px;
+    font-size: 1em;
+    transition: color 0.3s;
 }
 
-.medsos {
-    padding: 5px;
+.card .medsos a:hover {
+    color: #0056b3;
 }
