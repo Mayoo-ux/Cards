@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+section.profile {
+    height: 800px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card {
+    width: 200px;
+    height:450PX;
+    background-color: grey;
+    padding: 5px 10px;
+}
+.card a{
+        text-decoration: none;
+        padding: 5px 10px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.deskripsi{
+    padding: 5px;
+}
+
+.gambar img {
+    width: 100%;
+    max-width: 200px; 
+}
+
+.deskripsi {
+    padding: 5px;
+}
+
+.medsos {
+    padding: 5px;
+}
