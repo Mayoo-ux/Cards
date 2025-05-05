@@ -1,60 +1,301 @@
-
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-section.profile {
-    height: 100vh; 
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background: #614caf;
+    height: 70px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #c9d6df, #f4f4f4); 
+    justify-content: space-between;
+    padding: 10px 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    width:100%;
+    margin-right: 8px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-links li {
+    margin-left: 20px;
+    
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 100px 50px 50px;
+}
+
+.home {
+    background: url("background.jpg");
+    background-size: cover;
+    background-repeat: repeat-x; 
+    background-attachment: fixed;
+    background-position: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: backgroundMove 50s linear infinite;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.home .button {
+    background: #5505aa;
+    padding: 10px 20px;
+    color: #fefefe;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home .button:hover{
+    background:#716be6;
+    color:#0056b3;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome h1 {
+    animation: fadeSlideIn 1.5s ease forwards;
+}
+
+.welcome .button {
+    animation: fadeSlideIn 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.about {
+    background: #70179c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 600px;
+}   
+
+.about-content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+  
+                                            
+
+.product {
+    background: #9c24c1;
+    padding-top: 120px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    justify-content: center;
 }
 
 
 .card {
-    width: 300px;
-    background-color: #ffffff;
+    width: 250px;
+    height: 370px; 
+    background-color: #efdcff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 20px;
-    overflow: hidden;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin:30px;
 }
 
 
-.card .gambar img {
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
     width: 100%;
-    max-width: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 
-.card .deskripsi h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
+.card .nama {
+    font-size: 18px;
+    font-weight: bold;
     color: #333;
+    margin-bottom: 8px;
 }
 
-.card .deskripsi p {
-    font-size: 1em;
+.card .deskripsi {
+    font-size: 14px;
     color: #666;
-    margin: 0;
-    padding: 0 10px;
+    min-height: 30px;
+    margin-bottom: 8px;
+}
+
+.card .harga {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.card .button {
+    background-color: #68009c;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
 }
 
 
-.card .medsos a {
+.card button:hover {
+    background-color: #0056b3;
+}
+
+.contact {
+    background:#70179c;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+
+}
+
+.contact-info {
+    margin-top: 0;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-shadow: 0 0 10px #f2e7f7;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-shadow: 0 0 5px #efe2f6;
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
     text-decoration: none;
-    color: #6c757d; ;
-    margin: 0 5px;
-    font-size: 2em;
-    transition: color 0.3s;
 }
 
-.card .medsos a:hover {
-    color: #495057;
+.social-icons a:hover {
+    color: #FFD700;
 }
